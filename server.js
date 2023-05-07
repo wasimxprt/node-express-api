@@ -23,6 +23,7 @@ mongoose.connect(
 
 // Import routes
 const productRoutes = require("./routes/product");
+const userRoutes = require("./routes/user");
 
 // Middlewares
 app.use(express.json());
@@ -30,6 +31,7 @@ app.use(cors());
 
 // route Middlewares
 app.use("/api/products", productRoutes);
+app.use("/api/user", userRoutes);
 
 app.listen(3000, () => {
     console.log("Server started at 3000");
